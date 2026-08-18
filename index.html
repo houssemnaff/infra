@@ -3,16 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon projet IaC</title>
-  <link rel="stylesheet" href="style.css">
+
+  <title>DevOps Cloud Project</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background:
+        radial-gradient(circle at top left, #2563eb 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #7c3aed 0%, transparent 35%),
+        #0f172a;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .card {
+      padding: 60px 40px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .icon {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: #cbd5e1;
+      font-size: 20px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .technologies {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 35px;
+    }
+
+    .tech {
+      padding: 20px 10px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.3s;
+    }
+
+    .tech:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .tech-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .tech-name {
+      font-weight: bold;
+      color: #f8fafc;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border-radius: 50px;
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+      font-weight: bold;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #22c55e;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .technologies {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>🚀 Ça marche olll nno  ekher!</h1>
-    <p>Cette page tourne dans un conteneur Docker,</p>
-    <p>déployé sur une instance EC2,</p>
-    <p>créée avec Terraform.</p>
-    <div class="badge">Infrastructure as Code</div>
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="icon">🚀</div>
+
+      <h1>Déploiement réussi !</h1>
+
+      <p class="subtitle">
+        Mon infrastructure Cloud est maintenant automatisée
+        avec Terraform, Docker et GitHub Actions.
+      </p>
+
+      <div class="technologies">
+
+        <div class="tech">
+          <div class="tech-icon">☁️</div>
+          <div class="tech-name">AWS EC2</div>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">🏗️</div>
+          <div class="tech-name">Terraform</div>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">🐳</div>
+          <div class="tech-name">Docker</div>
+        </div>
+
+        <div class="tech">
+          <div class="tech-icon">⚙️</div>
+          <div class="tech-name">CI/CD</div>
+        </div>
+
+      </div>
+
+      <div class="status">
+        <span class="dot"></span>
+        Application en ligne
+      </div>
+
+      <footer>
+        Infrastructure as Code • Cloud • DevOps
+      </footer>
+
+    </div>
+
   </div>
+
 </body>
 </html>
